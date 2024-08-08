@@ -24,7 +24,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(diagnostic_msgs REQUIRED)
-find_package(aip_grasp_planning_interfaces REQUIRED)
+# find_package(aip_grasp_planning_interfaces REQUIRED)
 
 set(DEPENDENCIES
   builtin_interfaces
@@ -33,7 +33,7 @@ set(DEPENDENCIES
   geometry_msgs
   nav_msgs
   diagnostic_msgs
-  aip_grasp_planning_interfaces
+  # aip_grasp_planning_interfaces
   )
 
 #file (GLOB MSGS msg/*.msg)
@@ -49,6 +49,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MoveToPose.srv"
   "srv/SendInt.srv"
   "srv/MoveGripper.srv"
+  "srv/VizOpenGripper.srv"
+  "srv/VizCloseGripper.srv"
 
   "action/MoveArmMoveIt.action"
   #${MSGS}
