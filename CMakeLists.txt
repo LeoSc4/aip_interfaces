@@ -42,6 +42,7 @@ set(DEPENDENCIES
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/DialogDataType.msg"
+  "msg/MoveCylinders.msg"
 
   "srv/UserDialog.srv"
   "srv/MoveToJointPosition.srv"
