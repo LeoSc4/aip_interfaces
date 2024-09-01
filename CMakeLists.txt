@@ -25,6 +25,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(diagnostic_msgs REQUIRED)
 find_package(aip_grasp_planning_interfaces REQUIRED)
+find_package(moveit_msgs REQUIRED)
 
 set(DEPENDENCIES
   builtin_interfaces
@@ -33,6 +34,7 @@ set(DEPENDENCIES
   geometry_msgs
   nav_msgs
   diagnostic_msgs
+  moveit_msgs
   aip_grasp_planning_interfaces
   )
 
@@ -51,6 +53,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MoveGripper.srv"
   "srv/VizOpenGripper.srv"
   "srv/VizCloseGripper.srv"
+  "srv/AttachObject.srv"
+  "srv/DetachObject.srv"
 
   "action/MoveArmMoveIt.action"
   #${MSGS}
